@@ -1,0 +1,27 @@
+server:
+  port: 8080
+
+kafka:
+  trust-store-location: target/classes/secrets/trustStore
+  key-store-location: target/classes/secrets/keyStore
+  trust-store-password: trustStorePassword
+  key-store-password: keyStorePassword
+
+demo-kafka-producer:
+  topic-name: topicName
+  process-name: DEMO
+  client-id-prefix: SOME
+  client-id-postfix: CLIENT_ID
+  bootstrap-servers: bootstrapServers
+
+demo-kafka-listener:
+  topic-name: topicName
+  process-name: DEMO
+  client-id-prefix: SOME
+  client-id-postfix: CLIENT_ID
+  bootstrap-servers: bootstrapServers
+  commit-log-level: INFO
+  group-id: groupId
+  filter:
+    key-to-match: keyToMatch
+    value-to-match: valueToMatch
